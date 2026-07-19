@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: financial_lakehouse
+    schema: bronze
+    tables:
+      - name: s3_raw_stage
