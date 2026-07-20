@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fct_rolling_stock_metrics
+    description: "Daily closing prices and 5-day rolling averages for AAPL, MSFT, NVDA."
+    columns:
+      - name: trading_date
+        description: "The trading date, derived from the source file name."
+        tests:
+          - unique
+          - not_null
+
+      - name: apple_close_price
+        tests:
+          - not_null
+
+      - name: msft_close_price
+        tests:
+          - not_null
+
+      - name: nvda_close_price
+        tests:
+          - not_null
